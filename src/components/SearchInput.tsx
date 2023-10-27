@@ -21,7 +21,7 @@ const SearchInput = () => {
       <div className="w-full md:w-7/12 ">
          <form
             action=""
-            className="flex items-center py-2 transition-colors duration-300 border border-black bg-skin-fill rounded-3xl px-9 gap-x-2"
+            className="flex items-center px-2 py-2 transition-colors duration-300 border border-black bg-skin-fill rounded-3xl md:px-4 gap-x-2"
             onSubmit={handleSubmit}
          >
             <button

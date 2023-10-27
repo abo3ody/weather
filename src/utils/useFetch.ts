@@ -17,7 +17,7 @@ export const useFetch = (query: string) => {
          dispatch(GET_DATA_BEGIN());
          try {
             const response = await axios.get(
-               `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${query}&days=3`
+               `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${query}&days=3`
             );
             dispatch(GET_DATA_SUCCESS(response.data));
          } catch (error) {

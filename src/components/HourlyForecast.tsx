@@ -9,7 +9,7 @@ const HourlyForecast = () => {
             {" "}
             Hourly Forecast:
          </h1>
-         <div className="flex w-10/12 overflow-x-scroll gap-x-2 md:gap-x-4 color-effect-200">
+         <div className="flex w-full overflow-x-scroll md:w-10/12 gap-x-2 md:gap-x-4 color-effect-200">
             {data?.forecast?.forecastday[0]?.hour.map((hour) => (
                <div
                   className={`flex flex-col items-center px-2 py-4 my-2 shadow-md is-night gap-y-3 rounded-3xl ${
