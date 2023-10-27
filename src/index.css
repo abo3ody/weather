@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   :root {
+      --color-text-base: #292929;
+      --color-fill: #d9d9d9;
+      --color-themeBtn: #292929;
+      --bgColor: #9e9e9e;
+   }
+   .theme-dark {
+      --color-text-base: #ffffff;
+      --color-fill: #444;
+      --color-themeBtn: #ffffff;
+      --bgColor: #383838;
+   }
+}
+
+@layer components {
+   .color-effect-300 {
+      @apply transition-colors duration-300;
+   }
+   .color-effect-200 {
+      @apply transition-colors duration-200;
+   }
+}
+
+::-webkit-scrollbar {
+   height: 10px;
+   width: 0;
+   display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+   background: var(--color-fill);
+   border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+   background: var(--bgColor);
+   border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: #555;
+}
+
+.is-night {
+   background: linear-gradient(
+      174deg,
+      #443d64 -15.92%,
+      rgba(101, 130, 198, 0) 192.45%
+   );
+}
+
+.is-day {
+   background: linear-gradient(
+      169deg,
+      #f88508 -15.98%,
+      rgba(246, 250, 217, 0) 150.58%
+   );
+}
+
+@keyframes spinner {
+   to {
+      transform: rotate(360deg);
+   }
+}
+.loading {
+   width: 6rem;
+   height: 6rem;
+   margin: 0 auto;
+   margin-top: 10rem;
+   border-radius: 50%;
+   border: 4px solid #fff;
+   border-top-color: #383838;
+   animation: spinner 0.6s linear infinite;
+}
